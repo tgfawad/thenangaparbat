@@ -4,6 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>The Nanga Parbat</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
 <meta name="description" content="An ecosystem for the mountains of the Pakistani Himalaya — the trails, the people, and the peaks that guard them." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -47,6 +48,15 @@
     padding-top: 64px;
     opacity: 0;
     animation: rise 1s ease 0.1s forwards;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .logo {
+    width: 34px;
+    height: auto;
+    flex-shrink: 0;
   }
 
   .coords {
@@ -162,6 +172,29 @@
     display: inline-block;
   }
 
+  footer .est {
+    flex-basis: 100%;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--mist);
+    margin-top: 4px;
+  }
+
+  
+  footer .forsale {
+    flex-basis: 100%;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: var(--mist);
+    text-decoration: none;
+    margin-top: 2px;
+    transition: color 0.2s ease;
+  }
+  footer .forsale:hover {
+    color: var(--ice);
+  }
+
   @keyframes rise {
     from { opacity: 0; transform: translateY(14px); }
     to { opacity: 1; transform: translateY(0); }
@@ -182,6 +215,12 @@
 <body>
   <div class="wrap">
     <header>
+      <svg class="logo" viewBox="0 0 192 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The Nanga Parbat">
+        <path d="M0 150 L52 58 L104 150 Z" fill="#22384F"/>
+        <path d="M108 150 L150 74 L192 150 Z" fill="#22384F"/>
+        <path d="M52 58 L70 90 L60 98 L50 86 L40 100 L34 90 Z" fill="#FFFFFF"/>
+        <path d="M150 74 L166 104 L157 111 L149 102 L141 112 L134 103 Z" fill="#FFFFFF"/>
+      </svg>
       <span class="coords">35.24°N&nbsp;&nbsp;74.59°E&nbsp;&nbsp;·&nbsp;&nbsp;Gilgit-Baltistan</span>
     </header>
 
@@ -206,6 +245,9 @@
     <footer>
       <span class="name">The Nanga Parbat</span>
       <span class="status"><span class="dot"></span>Building · 2026</span>
+      <span class="est">Established 9 August 2026</span>
+      <span class="est">Created by Fawad Khan</span>
+      <a class="forsale" href="https://thefairymeadows.com" target="_blank" rel="noopener">The domain thefairymeadows.com is for sale →</a>
     </footer>
   </div>
 </body>
